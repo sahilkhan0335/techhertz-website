@@ -16,7 +16,7 @@ const HeroSection = () => {
               </h1>
               <p className="text-gray-600 text-lg mt-4 leading-relaxed">
                 We are a team of passionate developers and designers dedicated to transforming 
-                your ideas into innovative digital solutions. Let's build something extraordinary together.
+                your ideas into innovative digital solutions. Let&apos;s build something extraordinary together.
               </p>
             </div>
 
@@ -32,7 +32,7 @@ const HeroSection = () => {
 
           {/* Right Side - Image/Animation */}
           <div className="flex items-center justify-center h-96 md:h-full">
-            <div className="w-full h-96 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg flex items-center justify-center relative overflow-hidden">
+            <div className="w-full h-96 bg-linear-to-br from-blue-100 to-blue-50 rounded-lg flex items-center justify-center relative overflow-hidden">
               {/* Placeholder for image or 3D animation */}
               <div className="text-center">
                 <svg
