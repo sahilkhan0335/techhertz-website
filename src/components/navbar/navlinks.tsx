@@ -4,7 +4,7 @@ const links = [
   { name: "Home", path: "/" },
   { name: "Service", path: "/service" },
   { name: "Case study", path: "/case-study" },
-  { name: "Contact us", path: "/contact" },
+  { name: "About us", path: "/about" },
 ];
 
 const NavLinks = () => {
