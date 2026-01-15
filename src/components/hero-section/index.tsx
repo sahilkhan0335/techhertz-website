@@ -12,7 +12,7 @@ const HeroSection = () => {
                 Welcome to Tech Hertz
               </p>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2">
-                Keep Growing with <span className="text-blue-500">Technology</span>
+                Keep Growing with Us
               </h1>
               <p className="text-gray-600 text-lg mt-4 leading-relaxed">
                 We are a team of passionate developers and designers dedicated to transforming 
