@@ -2,36 +2,40 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="w-full bg-white min-h-screen flex items-center">
+    <section className="w-full bg-white min-h-screen flex items-start pt-20">
       <div className="max-w-7xl mx-auto px-6 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
           {/* Left Side - Content */}
-          <div className="flex flex-col justify-center space-y-6">
+          <div className="flex flex-col justify-start">
             <div>
-              <p className="text-blue-500 text-sm font-semibold uppercase tracking-wide">
-                Welcome to Tech Hertz
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2">
-                Keep Growing with Us
+              
+              <h1 className="text-5xl md:text-5xl font-bold text-gray-900 mt-2 leading-[62px]">
+                Transform your <br/> business with digital <br/> solutions
               </h1>
-              <p className="text-gray-600 text-lg mt-4 leading-relaxed">
+              <p className="text-gray-600 text-[20px] mt-[20px] leading-relaxed">
                 We are a team of passionate developers and designers dedicated to transforming 
-                your ideas into innovative digital solutions. Let&apos;s build something extraordinary together.
+                your ideas into innovative digital solutions. 
               </p>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-[36px] flex gap-4 items-center">
               <Link
                 href="/about"
-                className="inline-block bg-blue-500 text-white px-8 py-3 rounded-md hover:bg-blue-600 transition duration-300 font-semibold"
+                className="bg-blue-500 text-white px-10 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold hover:shadow-lg hover:scale-105 text-lg flex items-center gap-2 h-12"
               >
-                Know More
+                Know More <span className="text-3xl leading-none">→</span>
+              </Link>
+              <Link
+                href="/contact"
+                className="bg-blue-500 text-white px-10 py-3 rounded-md hover:bg-blue-700 transition duration-300 font-semibold hover:shadow-lg hover:scale-105 text-lg h-12 flex items-center"
+              >
+                Contact Us
               </Link>
             </div>
           </div>
 
           {/* Right Side - Image/Animation */}
-          <div className="flex items-center justify-center h-96 md:h-full">
+          <div className="flex items-start justify-center">
             <div className="w-full h-96 bg-linear-to-br from-blue-100 to-blue-50 rounded-lg flex items-center justify-center relative overflow-hidden">
               {/* Placeholder for image or 3D animation */}
               <div className="text-center">
