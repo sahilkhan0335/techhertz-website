@@ -12,10 +12,10 @@ const NavContainer = ({ children, className = "" }: NavContainerProps) => {
 
   return (
     <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-      className={`fixed top-0 left-0 w-full bg-white z-50 ${className}`}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+      className={`fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200/50 z-50 ${className}`}
     >
       <motion.div
         animate={{

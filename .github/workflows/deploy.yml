@@ -1,0 +1,25 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Trigger Vercel deployment
+        run: |
+          echo "🚀 Vercel will automatically deploy main branch"
+          echo "Check deployment status at: https://vercel.com/dashboard"
+
+      - name: Deployment notification
+        run: |
+          echo "✅ Code merged to main"
+          echo "📦 Vercel automatic deployment triggered"
+          echo "🌐 Production site will be updated shortly"

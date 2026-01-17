@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ButtonIcon from "./button-icon";
 
 interface KnowMoreButtonProps {
   href?: string;
@@ -26,13 +27,7 @@ const KnowMoreButton = ({
         className={`bg-blue-500 text-white px-6 sm:px-8 md:px-10 py-3 rounded-md hover:bg-blue-700 transition-all duration-300 font-semibold hover:shadow-lg text-base sm:text-lg flex items-center gap-2 h-12 whitespace-nowrap ${className}`}
       >
         Know More
-        <motion.span
-          animate={{ x: [0, 5, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 2 }}
-          className="text-3xl leading-none"
-        >
-          →
-        </motion.span>
+        <ButtonIcon />
       </Link>
     </motion.div>
   );
