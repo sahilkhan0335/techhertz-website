@@ -1,3 +1,4 @@
+"use client";
 import NavLinkItem from "./nav-link-item";
 
 export interface NavLink {
@@ -13,8 +14,13 @@ interface NavLinksListProps {
 const NavLinksList = ({ links, className = "" }: NavLinksListProps) => {
   return (
     <ul className={`hidden md:flex items-center gap-4 ${className}`}>
-      {links.map((link) => (
-        <NavLinkItem key={link.name} name={link.name} path={link.path} />
+      {links.map((link, index) => (
+        <NavLinkItem
+          key={link.name}
+          name={link.name}
+          path={link.path}
+          index={index}
+        />
       ))}
     </ul>
   );
