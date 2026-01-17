@@ -18,8 +18,8 @@ const MobileMenuDropdown = ({
 }: MobileMenuDropdownProps) => {
   return (
     <div
-      className={`md:hidden fixed top-[73px] left-0 right-0 bg-white shadow-lg border-t transition-all duration-300 overflow-hidden z-40 ${
-        isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+      className={`md:hidden fixed left-0 right-0 bg-white shadow-lg border-t transition-all duration-300 overflow-hidden z-40 ${
+        isOpen ? "max-h-96 opacity-100 visible top-[73px]" : "max-h-0 opacity-0 invisible pointer-events-none top-[73px]"
       } ${className}`}
     >
       <ul className="flex flex-col px-6 py-4 gap-4">

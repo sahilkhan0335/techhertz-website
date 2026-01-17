@@ -12,7 +12,7 @@ interface NavLinksListProps {
 
 const NavLinksList = ({ links, className = "" }: NavLinksListProps) => {
   return (
-    <ul className={`hidden md:flex items-center gap-8 ${className}`}>
+    <ul className={`hidden md:flex items-center gap-4 ${className}`}>
       {links.map((link) => (
         <NavLinkItem key={link.name} name={link.name} path={link.path} />
       ))}

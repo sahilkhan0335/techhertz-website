@@ -11,10 +11,8 @@ const NavContainer = ({ children, className = "" }: NavContainerProps) => {
 
   return (
     <header
-      className={`w-full transition-all duration-300 z-50 ${
-        isScrolled
-          ? "fixed top-0 left-0 bg-white shadow-lg"
-          : "relative bg-white"
+      className={`fixed top-0 left-0 w-full bg-white z-50 transition-shadow duration-200 ${
+        isScrolled ? "shadow-lg" : "shadow-none"
       } ${className}`}
     >
       {children}

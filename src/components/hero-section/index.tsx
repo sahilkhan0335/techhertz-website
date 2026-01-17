@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="w-full bg-white min-h-screen flex items-start pt-20">
+    <section className="w-full bg-white min-h-screen flex items-start pt-24 md:pt-28">
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch h-full">
           {/* Left Side - Content */}

@@ -13,7 +13,7 @@ const LogoImage = ({ width = 40, height = 40, className = "" }: LogoImageProps) 
       alt="Tech Hertz Logo"
       width={width}
       height={height}
-      className={className}
+      className={`w-8 h-8 sm:w-10 sm:h-10 ${className}`}
       priority
     />
   );
