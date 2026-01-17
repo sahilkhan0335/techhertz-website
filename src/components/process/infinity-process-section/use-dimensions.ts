@@ -14,8 +14,20 @@ export const useDimensions = (): UseDimensionsResult => {
 
   useEffect(() => {
     const updateDimensions = () => {
-      const width = Math.min(window.innerWidth * 0.92, 2200);
-      const height = window.innerHeight * 1.00;
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      
+      // Responsive width based on screen size
+      let width: number;
+      if (vw < 640) width = vw * 0.95;        // Mobile: 95% width
+      else if (vw < 768) width = vw * 0.92;   // Tablet portrait: 92%
+      else if (vw < 1024) width = vw * 0.88;  // Tablet landscape: 88%
+      else if (vw < 1536) width = vw * 0.85;  // Desktop: 85%
+      else width = Math.min(vw * 0.82, 2200); // Large screens: max 2200px
+      
+      // Responsive height based on aspect ratio
+      const height = vh < 700 ? vh * 0.85 : vh * 0.95;
+      
       setDimensions({ width, height });
     };
 
