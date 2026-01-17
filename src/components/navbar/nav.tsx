@@ -1,15 +1,20 @@
+"use client";
+import { NAV_LINKS } from "./constants/nav-constants";
 import Logo from "./logo";
+import MobileMenu from "./mobilemenu";
+import NavContainer from "./nav-container";
+import NavContent from "./nav-content";
 import NavLinks from "./navlinks";
-
 
 const Navbar = () => {
   return (
-    <header className="w-full border-b">
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <NavContainer>
+      <NavContent>
         <Logo />
         <NavLinks />
-      </nav>
-    </header>
+        <MobileMenu links={NAV_LINKS} />
+      </NavContent>
+    </NavContainer>
   );
 };
 
