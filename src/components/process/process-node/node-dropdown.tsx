@@ -18,7 +18,7 @@ const NodeDropdown = ({ isOpen, position, title, content }: NodeDropdownProps) =
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9, y: -10 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="fixed w-[85vw] max-w-[320px] sm:max-w-[360px] md:max-w-[400px] bg-linear-to-br from-gray-900/95 to-black/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-4 sm:p-5 md:p-6"
+      className="fixed w-[85vw] max-w-[320px] sm:max-w-90 md:max-w-100 bg-linear-to-br from-gray-900/95 to-black/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-4 sm:p-5 md:p-6"
       style={{
         top: position.top,
         left: position.left,
