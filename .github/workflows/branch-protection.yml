@@ -1,0 +1,36 @@
+name: Branch Protection
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate-branch-flow:
+    name: Validate Branch Flow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR from feat/fix/chore to dev
+        if: |
+          github.base_ref == 'dev' && 
+          !startsWith(github.head_ref, 'feat/') && 
+          !startsWith(github.head_ref, 'fix/') && 
+          !startsWith(github.head_ref, 'chore/') &&
+          github.head_ref != 'main'
+        run: |
+          echo "❌ Error: PRs to dev must come from feat/*, fix/*, or chore/* branches"
+          echo "Current branch: ${{ github.head_ref }}"
+          exit 1
+
+      - name: Check PR from dev to main only
+        if: github.base_ref == 'main' && github.head_ref != 'dev'
+        run: |
+          echo "❌ Error: PRs to main must come from dev branch only"
+          echo "Current branch: ${{ github.head_ref }}"
+          echo "Please merge to dev first, then create PR from dev to main"
+          exit 1
+
+      - name: Validation passed
+        run: |
+          echo "✅ Branch flow validation passed"
+          echo "Base: ${{ github.base_ref }}"
+          echo "Head: ${{ github.head_ref }}"
