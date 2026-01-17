@@ -16,7 +16,7 @@ const ProcessTitle = ({ className = "" }: ProcessTitleProps) => {
         ease: [0.22, 1, 0.36, 1],
         delay: 0.2 
       }}
-      className={`bg-clip-text text-transparent bg-linear-to-r from-white via-white to-gray-300 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center tracking-tight font-(--font-orbitron) mb-2 -mt-4 ${className}`}
+      className={`bg-clip-text text-transparent bg-linear-to-r from-white via-white to-gray-300 text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-tight font-(--font-orbitron) mb-2 xs:mb-3 sm:mb-4 -mt-2 xs:-mt-3 sm:-mt-4 ${className}`}
     >
       PROCESS
     </motion.h1>
