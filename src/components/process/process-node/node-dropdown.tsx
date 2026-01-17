@@ -18,7 +18,7 @@ const NodeDropdown = ({ isOpen, position, title, content }: NodeDropdownProps) =
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9, y: -10 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="fixed w-80 bg-linear-to-br from-gray-900/95 to-black/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-6"
+      className="fixed w-[85vw] max-w-[320px] sm:max-w-[360px] md:max-w-[400px] bg-linear-to-br from-gray-900/95 to-black/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-4 sm:p-5 md:p-6"
       style={{
         top: position.top,
         left: position.left,
@@ -26,12 +26,12 @@ const NodeDropdown = ({ isOpen, position, title, content }: NodeDropdownProps) =
         zIndex: 99999,
       }}
     >
-      <h3 className="text-lg font-bold text-white mb-4 border-b border-white/10 pb-3">
+      <h3 className="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4 border-b border-white/10 pb-2 sm:pb-3">
         {title}
       </h3>
-      <ul className="space-y-3">
+      <ul className="space-y-2 sm:space-y-3">
         {content.map((item, idx) => (
-          <li key={idx} className="flex items-start gap-2 text-sm text-white/80">
+          <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-white/80">
             <span className="text-blue-400 mt-1 shrink-0">→</span>
             <span>{item}</span>
           </li>
