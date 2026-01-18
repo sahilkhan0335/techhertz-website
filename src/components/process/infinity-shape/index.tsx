@@ -9,8 +9,10 @@ interface InfinityShapeProps {
 
 const InfinityShape = ({ className = "", width, height }: InfinityShapeProps) => {
   return (
-    <div className={`absolute inset-0 flex items-center justify-center ${className}`}>
-      <Infinity3DShape width={width} height={height} />
+    <div className={`absolute inset-0 flex items-center justify-center overflow-visible ${className}`}>
+      <div className="w-full h-full flex items-center justify-center">
+        <Infinity3DShape width={width} height={height} />
+      </div>
     </div>
   );
 };
