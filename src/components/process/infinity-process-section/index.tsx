@@ -31,7 +31,7 @@ const InfinityProcessSection = ({
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-      className={`relative w-full h-full flex items-center justify-center ${className}`}
+      className={`relative w-full h-full flex items-center justify-center overflow-visible px-4 sm:px-6 md:px-8 ${className}`}
     >
       <ShapeContainer width={dimensions.width} height={dimensions.height}>
         <InfinityShape width={dimensions.width} height={dimensions.height} />

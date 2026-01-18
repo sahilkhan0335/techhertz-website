@@ -8,7 +8,16 @@ interface ShapeContainerProps {
 
 const ShapeContainer = ({ width, height, children }: ShapeContainerProps) => {
   return (
-    <div className="relative" style={{ width, height }}>
+    <div 
+      className="relative mx-auto overflow-visible" 
+      style={{ 
+        width: '100%',
+        maxWidth: width,
+        height: '100%',
+        maxHeight: height,
+        aspectRatio: `${width} / ${height}`
+      }}
+    >
       {children}
     </div>
   );

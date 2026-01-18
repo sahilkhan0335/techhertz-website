@@ -15,7 +15,7 @@ export default function ProcessPage() {
         <ProcessTitle />
       </div>
       {/* Section 3: Infinity Process Visual */}
-      <div className="flex-1 flex items-center justify-center w-full min-h-0 -mt-16 xs:-mt-20 sm:-mt-24 md:-mt-32 lg:-mt-40 xl:-mt-48">
+      <div className="flex-1 flex items-center justify-center w-full min-h-0 overflow-visible -mt-2 xs:-mt-4 sm:-mt-10 md:-mt-16 lg:-mt-22 xl:-mt-28">
         <InfinityProcessSection />
       </div>
     </main>

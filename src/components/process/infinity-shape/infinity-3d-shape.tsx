@@ -3,9 +3,9 @@ import { useMemo } from "react";
 import BlueLineAnimation from "./blue-line-animation";
 import GradientOverlay from "./gradient-overlay";
 import {
-  calculatePathLength,
-  generateInfinityPathPoints,
-  pathPointsToSVGPath,
+    calculatePathLength,
+    generateInfinityPathPoints,
+    pathPointsToSVGPath,
 } from "./path-generator";
 import WhiteOutlinePath from "./white-outline-path";
 
@@ -16,8 +16,8 @@ interface Infinity3DShapeProps {
 }
 
 const Infinity3DShape = ({
-  width = 2000,
-  height = 1800,
+  width = 2600,
+  height = 3600,
   className = "",
 }: Infinity3DShapeProps) => {
   const { pathD, pathLength } = useMemo(() => {
@@ -28,11 +28,15 @@ const Infinity3DShape = ({
   }, [width, height]);
 
   return (
-    <div className={`relative ${className}`} style={{ width, height }}>
+    <div
+      className={`relative ${className}`}
+      style={{ width: "100%", height: "100%", maxWidth: width, maxHeight: height }}
+    >
       <svg
-        width={width}
-        height={height}
+        width="100%"
+        height="100%"
         viewBox={`0 0 ${width} ${height}`}
+        preserveAspectRatio="xMidYMid meet"
         className="absolute inset-0"
         suppressHydrationWarning
       >
