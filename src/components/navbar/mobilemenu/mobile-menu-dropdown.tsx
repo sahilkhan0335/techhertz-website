@@ -26,7 +26,7 @@ const MobileMenuDropdown = ({
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className={`md:hidden fixed left-0 right-0 bg-white shadow-lg border-t overflow-hidden z-40 top-18.25 ${className}`}
+          className={`md:hidden fixed left-0 right-0 bg-[rgba(10,10,14,0.92)] backdrop-blur-xl shadow-2xl border-t border-white/10 overflow-hidden z-40 top-20 ${className}`}
         >
           <MobileMenuList>
             {links.map((link, index) => (
