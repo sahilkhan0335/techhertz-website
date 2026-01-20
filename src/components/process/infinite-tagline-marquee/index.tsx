@@ -14,7 +14,7 @@ const InfiniteTaglineMarquee = ({ className = "" }: InfiniteTaglineMarqueeProps)
   return (
     <div className={`flex items-center justify-center w-full min-h-15 ${className}`}>
       <div className="text-center">
-        <span className="text-white font-bold text-base sm:text-lg md:text-xl uppercase tracking-[0.3em] font-mono inline-block">
+        <span className="text-black font-bold text-base sm:text-lg md:text-xl uppercase tracking-[0.3em] font-mono inline-block">
           {displayedText.split("").map((letter, index) => (
             <AnimatedLetter key={index} letter={letter} index={index} />
           ))}

@@ -3,25 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "set NEXT_DISABLE_TURBOPACK=1 && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.15.19",
     "framer-motion": "^12.26.2",
+    "gsap": "^3.13.0",
     "next": "16.1.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.176.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "description": "![CI Pipeline](https://github.com/sahilkhan0335/techhertz-website/workflows/CI%20Pipeline/badge.svg)\r ![Next.js](https://img.shields.io/badge/Next.js-16.1.1-black)\r ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)\r ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8)",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
