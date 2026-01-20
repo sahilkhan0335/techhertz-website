@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface MobileMenuLinkProps {
   name: string;
@@ -17,6 +18,9 @@ const MobileMenuLink = ({
   onClick, 
   className = "" 
 }: MobileMenuLinkProps) => {
+  const pathname = usePathname();
+  const isActive = pathname === path;
+
   return (
     <motion.li
       initial={{ opacity: 0, x: -20 }}
@@ -26,7 +30,12 @@ const MobileMenuLink = ({
       <Link
         href={path}
         onClick={onClick}
-        className={`text-gray-700 hover:text-blue-500 transition-colors duration-300 font-medium py-2 block hover:pl-2 border-l-2 border-transparent hover:border-blue-500 ${className}`}
+        className={`transition-colors duration-300 font-medium py-2 block hover:pl-2 border-l-2 transform cursor-pointer ${
+          isActive
+            ? "text-white border-cyan-400 pl-2"
+            : "text-white/70 hover:text-white border-transparent hover:border-cyan-400"
+        } ${className}`}
+        aria-current={isActive ? "page" : undefined}
       >
         {name}
       </Link>
