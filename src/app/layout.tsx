@@ -1,3 +1,5 @@
+import ContactModal from "@/components/contact/contact-modal";
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar/nav";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Orbitron, Share_Tech_Mono } from "next/font/google";
@@ -26,8 +28,21 @@ const shareTechMono = Share_Tech_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tech Hertz ",
-  description: "Keep Growing..",
+  title: "TechHertz - Digital Innovation & Web Development Agency",
+  description: "Transform your ideas into stunning digital experiences. Expert web development, UI/UX design, and digital solutions that drive growth.",
+  keywords: ["web development", "UI/UX design", "digital agency", "software development", "brand strategy"],
+  authors: [{ name: "TechHertz" }],
+  openGraph: {
+    title: "TechHertz - Digital Innovation & Web Development Agency",
+    description: "Transform your ideas into stunning digital experiences. Expert web development, UI/UX design, and digital solutions that drive growth.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TechHertz - Digital Innovation & Web Development Agency",
+    description: "Transform your ideas into stunning digital experiences.",
+  },
 };
 
 export default function RootLayout({
@@ -41,7 +56,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${shareTechMono.variable} antialiased`}
       >
         <Navbar/>
+        <ContactModal />
         {children}
+        <Footer />
       </body>
     </html>
   );

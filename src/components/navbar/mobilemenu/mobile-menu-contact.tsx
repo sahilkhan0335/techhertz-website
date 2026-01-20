@@ -12,7 +12,7 @@ const MobileMenuContact = ({ className = "" }: MobileMenuContactProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
-      className={`pt-2 border-t ${className}`}
+      className={`pt-2 border-t border-white/10 ${className}`}
     >
       <ContactButton className="w-full text-center" />
     </motion.li>

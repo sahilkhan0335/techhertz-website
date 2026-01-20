@@ -21,7 +21,7 @@ const MobileMenuButton = ({ isOpen, onClick, className = "" }: MobileMenuButtonP
       transition={{ duration: 0.4, delay: 0.3 }}
     >
       <motion.span
-        className="w-6 h-0.5 bg-gray-700 group-hover:bg-blue-500"
+        className="w-6 h-0.5 bg-white/80 group-hover:bg-cyan-400"
         animate={{
           rotate: isOpen ? 45 : 0,
           y: isOpen ? 8 : 0,
@@ -29,14 +29,14 @@ const MobileMenuButton = ({ isOpen, onClick, className = "" }: MobileMenuButtonP
         transition={{ duration: 0.3 }}
       />
       <motion.span
-        className="w-6 h-0.5 bg-gray-700 group-hover:bg-blue-500"
+        className="w-6 h-0.5 bg-white/80 group-hover:bg-cyan-400"
         animate={{
           opacity: isOpen ? 0 : 1,
         }}
         transition={{ duration: 0.3 }}
       />
       <motion.span
-        className="w-6 h-0.5 bg-gray-700 group-hover:bg-blue-500"
+        className="w-6 h-0.5 bg-white/80 group-hover:bg-cyan-400"
         animate={{
           rotate: isOpen ? -45 : 0,
           y: isOpen ? -8 : 0,

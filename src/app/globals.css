@@ -1,2 +1,109 @@
 @import "tailwindcss";
 
+:root {
+  --bg-dark: 13 13 18;
+  --bg-dark-2: 18 19 26;
+  --surface-dark: 24 26 36;
+  --accent-purple: 168 85 247;
+  --accent-cyan: 34 211 238;
+  --accent-pink: 236 72 153;
+  --accent-blue: 59 130 246;
+}
+
+body {
+  background-color: rgb(var(--bg-dark));
+  color: #ffffff;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.glass-hover {
+  transition: all 0.3s ease;
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #9333ea, #ec4899, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(rgb(var(--surface-dark)), rgb(var(--surface-dark))) padding-box,
+              linear-gradient(135deg, rgba(59, 130, 246, 0.6), rgba(168, 85, 247, 0.6), rgba(34, 211, 238, 0.6)) border-box;
+  border: 2px solid transparent;
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #a855f7, #ec4899, #06b6d4, #8b5cf6);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.bento-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease;
+}
+
+.bento-card:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
+}
+
+.section-light {
+  background: #ffffff;
+  color: #111827;
+}
+
+.section-dark {
+  background: rgb(var(--bg-dark));
+  color: #ffffff;
+}
+
+.section-dark-2 {
+  background: rgb(var(--bg-dark-2));
+  color: #ffffff;
+}
+
+.subtle-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-size: 28px 28px;
+}

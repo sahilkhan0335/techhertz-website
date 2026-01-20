@@ -1,18 +1,20 @@
 "use client";
+import { triggerContactModal } from "@/components/contact/contact-modal";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 interface ContactButtonProps {
   className?: string;
-  href?: string;
   children?: React.ReactNode;
 }
 
 const ContactButton = ({
   className = "",
-  href = "/contact",
   children = "Contact",
 }: ContactButtonProps) => {
+  const handleClick = () => {
+    triggerContactModal();
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -21,12 +23,17 @@ const ContactButton = ({
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <Link
-        href={href}
-        className={`bg-blue-500 text-white px-5 py-2 rounded-md hover:bg-blue-600 transition-all duration-300 font-semibold shadow-md hover:shadow-lg ${className}`}
+      <button
+        type="button"
+        onClick={handleClick}
+        className={`relative overflow-hidden rounded-full px-5 py-2 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 ${className}`}
       >
-        {children}
-      </Link>
+        <span className="absolute inset-0 bg-linear-to-r from-cyan-500 via-blue-500 to-purple-600" />
+        <span className="absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.35),transparent_60%)]" />
+        <span className="relative z-10 flex items-center gap-2">
+          {children}
+        </span>
+      </button>
     </motion.div>
   );
 };
